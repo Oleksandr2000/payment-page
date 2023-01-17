@@ -1,0 +1,278 @@
+* {
+  font-family: "TT Interfaces";
+}
+.container {
+  width: 90%;
+  margin: 0 auto;
+
+  @media screen and (max-width: 768px) {
+    width: 100%;
+  }
+}
+
+.payment {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.select-menu {
+  height: auto;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.select {
+  width: 100%;
+  position: relative;
+  border: 2px solid #6a767b;
+  background-color: #e6e3f2;
+  border-radius: 6px;
+  z-index: 100;
+}
+
+.select__is-active {
+  border-radius: 6px 6px 0px 0px;
+}
+
+.options-list {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  width: clac(100% + 4px);
+  display: none;
+  background-color: #e6e3f2;
+  border-radius: 0 0 6px 6px;
+  transition: 0.4s linear 0.2s;
+  height: auto;
+  margin: 2px -2px;
+}
+
+.option {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  color: #201e1e;
+  padding: 10px 15px;
+  font-weight: 500;
+  font-size: 14px;
+  transition: 0.3s ease-in-out;
+}
+
+.option__label {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.option__check {
+  display: none;
+  width: 16px;
+  height: 16px;
+  float: right;
+}
+
+.option__check.active {
+  display: block;
+}
+
+.option:hover {
+  background-color: #d6d1ee;
+}
+
+.option img {
+  margin-right: 10px;
+}
+
+.selected__option {
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: left;
+  margin-right: 10px;
+}
+
+.is-selected {
+  background-color: green;
+  width: 20px;
+  height: 20px;
+}
+
+.selected__option img {
+  height: 20px;
+  width: 20px;
+  margin-right: 10px;
+}
+
+.options-list.active {
+  display: block;
+}
+
+.payment__form {
+  max-width: 425px;
+  margin: 10px 0 auto;
+  background-color: #fff;
+  padding: 25px 20px;
+  border-radius: 6px;
+}
+
+.payment__block {
+  margin-top: 12px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.payment__block_closed {
+  padding-bottom: 14px;
+  border-bottom: 1px solid #c0c5cc;
+}
+
+.payment__select {
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.payment__select-system {
+  width: 80%;
+  margin-right: 10px;
+  padding: 10px 15px;
+}
+
+.payment__select-currency {
+  width: 20%;
+  margin-right: 10px;
+  padding: 10px 15px;
+}
+
+.payment__control {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.payment__input {
+  font-size: 14px;
+  width: 100%;
+  border-radius: 6px;
+  border: 2px solid #6a767b;
+  height: 40px;
+  padding: 0 15px;
+}
+
+.payment__label {
+  font-size: 14px;
+  color: #c0c5cc;
+  padding-bottom: 8px;
+}
+
+.payment__counter {
+  display: flex;
+  justify-content: space-between;
+  border: 2px solid #6a767b;
+  background-color: #e6e3f2;
+  border-radius: 6px;
+  padding: 10px 10px;
+  font-size: 14px;
+  margin-left: 15px;
+}
+
+.payment__counter span {
+  padding: 0 5px;
+}
+
+.payment__counter button {
+  background: transparent;
+  border: none;
+  box-sizing: border-box;
+}
+
+.payment__info-name {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  color: #c0c5cc;
+}
+
+.payment__info-name_total {
+  color: #304651;
+}
+
+.payment__info-value {
+  font-family: "TT Interfaces";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  color: #304651;
+}
+
+.payment__info-value_promo {
+  color: #72ba79;
+}
+
+.payment__info-value_total {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 20px;
+  color: #304651;
+}
+
+.payment__button {
+  box-sizing: border-box;
+  border: none;
+  font-size: 14px;
+  color: #fff;
+  height: 40px;
+  box-shadow: 0px 5px 84px 3px rgba(191, 191, 216, 0.35);
+  border-radius: 6px;
+}
+
+.payment__button_cancel {
+  background-color: #4a6776;
+  width: 28%;
+}
+
+.payment__button_submit {
+  background-color: #46c532;
+  width: 70%;
+}
+
+.payment__notice {
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 11px;
+  font-weight: 500;
+  color: #c0c5cc;
+  line-height: 18px;
+}
+
+.payment__notice img {
+  width: 10%;
+}
+
+.payment__notice div {
+  width: 85%;
+}
+
+.payment__cards {
+  width: 40%;
+}
+
+.payment__title {
+  width: 60%;
+  font-size: 18px;
+  font-weight: 500;
+  color: #4a525f;
+  line-height: 18px;
+}

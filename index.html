@@ -1,0 +1,264 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link href="index.css" rel="stylesheet" />
+    <link href="normalize.css" rel="stylesheet" />
+    <link href="./assets/fonts/stylesheet.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Payment Page</title>
+  </head>
+  <body>
+    <section class="container payment">
+      <form class="payment__form">
+        <div class="payment__block">
+          <div class="payment__title">
+            Minecraft VIP privelege (Valhalla servers)
+          </div>
+          <img
+            src="./assets/icons/logo_coinbase.png"
+            alt="coinbase"
+            width="90px"
+          />
+        </div>
+        <div class="payment__block">
+          <div class="select payment__select payment__select-system">
+            <div class="select-menu">
+              <div class="selected__option">
+                <div class="option__label">
+                  <img src="./assets/icons/min_logo_fondy.png" alt="Stripe" />
+                  <div>Foundy</div>
+                </div>
+              </div>
+              <i class="fas fa-angle-down"></i>
+            </div>
+            <div class="options-list">
+              <div id="foundy" class="option">
+                <div class="option__label">
+                  <img src="./assets/icons/min_logo_fondy.png" alt="Stripe" />
+                  <div>Foundy</div>
+                </div>
+                <img
+                  src="./assets/icons/checked.png"
+                  alt="checked"
+                  class="option__check active"
+                />
+              </div>
+              <div id="striple" class="option">
+                <div class="option__label">
+                  <img src="./assets/icons/min_logo_stripe.png" alt="Stripe" />
+                  <div>Stripe</div>
+                </div>
+                <img
+                  src="./assets/icons/checked.png"
+                  alt="checked"
+                  class="option__check"
+                />
+              </div>
+              <div id="coinbase" class="option">
+                <div class="option__label">
+                  <img
+                    src="./assets//icons/min_logo_coinbase.png"
+                    alt="Coinbase"
+                  />
+                  <div>Coinbase</div>
+                </div>
+                <img
+                  src="./assets/icons/checked.png"
+                  alt="checked"
+                  class="option__check"
+                />
+              </div>
+              <div id="liqpay" class="option">
+                <div class="option__label">
+                  <img src="./assets/icons/min_logo_liqpay.png" alt="LiqPay" />
+                  <div>Приват 24</div>
+                </div>
+                <img
+                  src="./assets/icons/checked.png"
+                  alt="checked"
+                  class="option__check"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="select payment__select payment__select-currency">
+            <div class="select-menu">
+              <div class="selected__option">
+                <div class="option__label">
+                  <div>USD</div>
+                </div>
+              </div>
+              <i class="fas fa-angle-down"></i>
+            </div>
+            <div class="options-list">
+              <div class="option">
+                <div class="option__label">
+                  <div>USD</div>
+                </div>
+                <img
+                  src="./assets/icons/checked.png"
+                  alt="checked"
+                  class="option__check active"
+                />
+              </div>
+              <div class="option">
+                <div class="option__label">
+                  <div>ETH</div>
+                </div>
+                <img
+                  src="./assets/icons/checked.png"
+                  alt="checked"
+                  class="option__check"
+                />
+              </div>
+              <div class="option">
+                <div class="option__label">
+                  <div>UAH</div>
+                </div>
+                <img
+                  src="./assets/icons/checked.png"
+                  alt="checked"
+                  class="option__check"
+                />
+              </div>
+              <div class="option">
+                <div class="option__label">
+                  <div>EUR</div>
+                </div>
+                <img
+                  src="./assets/icons/checked.png"
+                  alt="checked"
+                  class="option__check"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="payment__block">
+          <div class="payment__control">
+            <label for="email" class="payment__label">Email address</label>
+            <input
+              name="email"
+              type="text"
+              placeholder="Email address"
+              class="payment__input"
+            />
+          </div>
+        </div>
+        <div class="payment__block payment__block_closed">
+          <div class="payment__control">
+            <label for="email" class="payment__label">Promo code</label>
+            <input
+              name="email"
+              type="text"
+              placeholder="Promo code"
+              class="payment__input"
+            />
+          </div>
+          <div class="payment__counter">
+            <button type="button">
+              <img src="./assets/icons/minus.png" alt="-" />
+            </button>
+            <span>1</span>
+            <button type="button">
+              <img src="./assets//icons//plus.png" alt="+" />
+            </button>
+          </div>
+        </div>
+        <div class="payment__block">
+          <div class="payment__info-name">Count</div>
+          <div class="payment__info-value">x1</div>
+        </div>
+        <div class="payment__block">
+          <div class="payment__info-name">Subtotal</div>
+          <div class="payment__info-value">$1500</div>
+        </div>
+        <div class="payment__block payment__block_closed">
+          <div class="payment__info-name">Promo code</div>
+          <div class="payment__info-value payment__info-value_promo">-10%</div>
+        </div>
+        <div class="payment__block">
+          <div class="payment__info-name payment__info-name_total">Total</div>
+          <div class="payment__info-value payment__info-value_total">1350%</div>
+        </div>
+        <div class="payment__block">
+          <button type="button" class="payment__button payment__button_cancel">
+            Cancel
+          </button>
+          <button type="submit" class="payment__button payment__button_submit">
+            Make payment
+          </button>
+        </div>
+        <div class="payment__block">
+          <div class="payment__notice">
+            <img src="./assets/icons/star.png" alt="*" />
+            <div>
+              We accept payment <br />
+              by Visa™ & MasterCard™
+            </div>
+          </div>
+          <img
+            width="180px"
+            src="./assets/icons/logos.png"
+            alt="Visa & MasterCard"
+            class="payments__card"
+          />
+        </div>
+      </form>
+    </section>
+  </body>
+  <script>
+    let selectMenu = document.querySelectorAll(".select-menu");
+    let selectItem = document.querySelectorAll(".option");
+
+    function selectToggle() {
+      this.parentElement.classList.toggle("select__is-active");
+      const options = this.parentElement.querySelector(".options-list");
+      options.classList.toggle("active");
+
+      this.querySelector(".fa-angle-down").classList.toggle("fa-angle-up");
+    }
+
+    function selectChoose() {
+      let selectedOption = this;
+      let select = this.closest(".select");
+      let optionsList = select.querySelector(".options-list");
+      let currentOption = select.querySelector(".selected__option");
+      let options = optionsList.querySelectorAll(".option__check");
+
+      options.forEach((item) => {
+        item.classList.remove("active");
+      });
+
+      selectedOption.querySelector(".option__check").classList.add("active");
+
+      currentOption.innerHTML =
+        selectedOption.querySelector(".option__label").innerHTML;
+
+      select.classList.remove("select__is-active");
+
+      select.querySelector(".fa-angle-down").classList.toggle("fa-angle-up");
+
+      optionsList.classList.remove("active");
+    }
+
+    selectMenu.forEach((item) => {
+      item.addEventListener("click", selectToggle);
+    });
+
+    selectItem.forEach((item) => {
+      item.addEventListener("click", selectChoose);
+    });
+  </script>
+</html>
