@@ -1,10 +1,8 @@
-<html>
+<!DOCTYPE >
+<html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
-    />
+    <meta charset="UTF-8" lang="en" />
+    <meta name="viewport" content="width=device-width" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link href="index.css" rel="stylesheet" />
     <link href="normalize.css" rel="stylesheet" />
@@ -20,160 +18,67 @@
   </head>
   <body>
     <section class="container payment">
-      <form class="payment__form">
-        <div class="payment__block">
-          <div class="payment__title">
-            Minecraft VIP privelege (Valhalla servers)
-          </div>
+      <form id="payment__form" class="payment__form">
+        <div class="payment__block-align-center">
+          <h2 class="payment__title">
+            Minecraft VIP privelege <br />
+            (Valhalla servers)
+          </h2>
           <img
-            src="./assets/icons/logo_coinbase.png"
+            id="payment__system-logo"
+            class="payment__system-logo"
+            src="./assets/icons/logo_fondy.png"
             alt="coinbase"
-            width="90px"
           />
         </div>
-        <div class="payment__block">
-          <div class="select payment__select payment__select-system">
-            <div class="select-menu">
-              <div class="selected__option">
-                <div class="option__label">
-                  <img src="./assets/icons/min_logo_fondy.png" alt="Stripe" />
-                  <div>Foundy</div>
-                </div>
-              </div>
-              <i class="fas fa-angle-down"></i>
-            </div>
-            <div class="options-list">
-              <div id="foundy" class="option">
-                <div class="option__label">
-                  <img src="./assets/icons/min_logo_fondy.png" alt="Stripe" />
-                  <div>Foundy</div>
-                </div>
-                <img
-                  src="./assets/icons/checked.png"
-                  alt="checked"
-                  class="option__check active"
-                />
-              </div>
-              <div id="striple" class="option">
-                <div class="option__label">
-                  <img src="./assets/icons/min_logo_stripe.png" alt="Stripe" />
-                  <div>Stripe</div>
-                </div>
-                <img
-                  src="./assets/icons/checked.png"
-                  alt="checked"
-                  class="option__check"
-                />
-              </div>
-              <div id="coinbase" class="option">
-                <div class="option__label">
-                  <img
-                    src="./assets//icons/min_logo_coinbase.png"
-                    alt="Coinbase"
-                  />
-                  <div>Coinbase</div>
-                </div>
-                <img
-                  src="./assets/icons/checked.png"
-                  alt="checked"
-                  class="option__check"
-                />
-              </div>
-              <div id="liqpay" class="option">
-                <div class="option__label">
-                  <img src="./assets/icons/min_logo_liqpay.png" alt="LiqPay" />
-                  <div>Приват 24</div>
-                </div>
-                <img
-                  src="./assets/icons/checked.png"
-                  alt="checked"
-                  class="option__check"
-                />
-              </div>
+        <div class="payment__block-selects">
+          <div class="custom__select">
+            <div class="payment__label">Payment System</div>
+            <div class="payment__select-system">
+              <div id="select-system"></div>
             </div>
           </div>
-          <div class="select payment__select payment__select-currency">
-            <div class="select-menu">
-              <div class="selected__option">
-                <div class="option__label">
-                  <div>USD</div>
-                </div>
-              </div>
-              <i class="fas fa-angle-down"></i>
-            </div>
-            <div class="options-list">
-              <div class="option">
-                <div class="option__label">
-                  <div>USD</div>
-                </div>
-                <img
-                  src="./assets/icons/checked.png"
-                  alt="checked"
-                  class="option__check active"
-                />
-              </div>
-              <div class="option">
-                <div class="option__label">
-                  <div>ETH</div>
-                </div>
-                <img
-                  src="./assets/icons/checked.png"
-                  alt="checked"
-                  class="option__check"
-                />
-              </div>
-              <div class="option">
-                <div class="option__label">
-                  <div>UAH</div>
-                </div>
-                <img
-                  src="./assets/icons/checked.png"
-                  alt="checked"
-                  class="option__check"
-                />
-              </div>
-              <div class="option">
-                <div class="option__label">
-                  <div>EUR</div>
-                </div>
-                <img
-                  src="./assets/icons/checked.png"
-                  alt="checked"
-                  class="option__check"
-                />
-              </div>
+          <div class="custom__select">
+            <div class="payment__label">Currency</div>
+            <div class="payment__select-currency">
+              <div id="select-currency"></div>
             </div>
           </div>
         </div>
-        <div class="payment__block">
+        <div class="payment__block-selects">
           <div class="payment__control">
             <label for="email" class="payment__label">Email address</label>
             <input
+              id="email"
               name="email"
               type="text"
               placeholder="Email address"
               class="payment__input"
             />
           </div>
+          <div class="payment__control">
+            <label for="counter" class="payment__label">Count</label>
+            <div class="payment__counter">
+              <button type="button" id="decrease">
+                <img src="./assets/icons/minus.png" alt="-" width="12" />
+              </button>
+              <input value="01" id="counter" type="text" readonly />
+              <button type="button" id="increase">
+                <img src="./assets/icons/plus.png" alt="+" width="12" />
+              </button>
+            </div>
+          </div>
         </div>
         <div class="payment__block payment__block_closed">
           <div class="payment__control">
-            <label for="email" class="payment__label">Promo code</label>
+            <label for="promo" class="payment__label">Promo code</label>
             <input
-              name="email"
+              id="promo"
+              name="promo"
               type="text"
               placeholder="Promo code"
               class="payment__input"
             />
-          </div>
-          <div class="payment__counter">
-            <button type="button">
-              <img src="./assets/icons/minus.png" alt="-" />
-            </button>
-            <span>1</span>
-            <button type="button">
-              <img src="./assets//icons//plus.png" alt="+" />
-            </button>
           </div>
         </div>
         <div class="payment__block">
@@ -188,19 +93,19 @@
           <div class="payment__info-name">Promo code</div>
           <div class="payment__info-value payment__info-value_promo">-10%</div>
         </div>
-        <div class="payment__block">
+        <div class="payment__block payment__block_gap-top">
           <div class="payment__info-name payment__info-name_total">Total</div>
           <div class="payment__info-value payment__info-value_total">1350%</div>
         </div>
         <div class="payment__block">
-          <button type="button" class="payment__button payment__button_cancel">
+          <a href="#" class="payment__button" id="payment__button_cancel">
             Cancel
-          </button>
+          </a>
           <button type="submit" class="payment__button payment__button_submit">
             Make payment
           </button>
         </div>
-        <div class="payment__block">
+        <div class="payment__block payment__block_gap-top">
           <div class="payment__notice">
             <img src="./assets/icons/star.png" alt="*" />
             <div>
@@ -209,7 +114,7 @@
             </div>
           </div>
           <img
-            width="180px"
+            id="card-icon"
             src="./assets/icons/logos.png"
             alt="Visa & MasterCard"
             class="payments__card"
@@ -217,48 +122,7 @@
         </div>
       </form>
     </section>
+
+    <script src="./index.js"></script>
   </body>
-  <script>
-    let selectMenu = document.querySelectorAll(".select-menu");
-    let selectItem = document.querySelectorAll(".option");
-
-    function selectToggle() {
-      this.parentElement.classList.toggle("select__is-active");
-      const options = this.parentElement.querySelector(".options-list");
-      options.classList.toggle("active");
-
-      this.querySelector(".fa-angle-down").classList.toggle("fa-angle-up");
-    }
-
-    function selectChoose() {
-      let selectedOption = this;
-      let select = this.closest(".select");
-      let optionsList = select.querySelector(".options-list");
-      let currentOption = select.querySelector(".selected__option");
-      let options = optionsList.querySelectorAll(".option__check");
-
-      options.forEach((item) => {
-        item.classList.remove("active");
-      });
-
-      selectedOption.querySelector(".option__check").classList.add("active");
-
-      currentOption.innerHTML =
-        selectedOption.querySelector(".option__label").innerHTML;
-
-      select.classList.remove("select__is-active");
-
-      select.querySelector(".fa-angle-down").classList.toggle("fa-angle-up");
-
-      optionsList.classList.remove("active");
-    }
-
-    selectMenu.forEach((item) => {
-      item.addEventListener("click", selectToggle);
-    });
-
-    selectItem.forEach((item) => {
-      item.addEventListener("click", selectChoose);
-    });
-  </script>
 </html>
